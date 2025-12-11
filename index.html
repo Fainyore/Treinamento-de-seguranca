@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento - Segurança da Informação</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Treinamento Gamificado de Segurança da Informação</h1>
+</header>
+
+<main id="content">
+
+    <section id="inicio">
+        <h2>Bem-vindo(a)</h2>
+        <p>Comece sua trilha gamificada de Segurança da Informação.</p>
+        <button onclick="iniciarTreinamento()">Iniciar</button>
+    </section>
+
+    <section id="modulo" class="hidden">
+        <h2 id="tituloModulo"></h2>
+        <p id="conteudoModulo"></p>
+        <button onclick="proximoModulo()">Próximo</button>
+    </section>
+
+    <section id="avaliacao" class="hidden">
+        <h2>Avaliação Final</h2>
+        <form id="formAvaliacao"></form>
+        <button onclick="finalizarAvaliacao()">Enviar Avaliação</button>
+    </section>
+
+    <section id="mensagemFinal" class="hidden">
+        <h2>🎉 Parabéns! Você foi aprovado! 🎉</h2>
+        <p>Agora preencha seus dados para gerar o certificado.</p>
+        <button onclick="mostrarCertificado()">Continuar</button>
+    </section>
+
+    <section id="certificado" class="hidden">
+        <h2>Gerar Certificado</h2>
+        <input type="text" id="nomeCompleto" placeholder="Nome Completo">
+        <input type="email" id="email" placeholder="E-mail">
+        <button onclick="gerarCertificadoPDF()">Baixar Certificado PDF</button>
+    </section>
+<footer>
+    <p>&copy;Julio, Davidson e Ederson. Todos os direitos reservados</p>
+</footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
